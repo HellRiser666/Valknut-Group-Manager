@@ -23,7 +23,8 @@ namespace Wesley.ValknutGroupManager.Start
                         "~/Scripts/custom.js"));
 
             bundles.Add(new StyleBundle("~/bundles/css").Include(
-                        "~/Content/Site.css"));
+                        "~/Content/Site.css",
+                        "~/Content/css/custom-distances.css"));
 
         }
     }

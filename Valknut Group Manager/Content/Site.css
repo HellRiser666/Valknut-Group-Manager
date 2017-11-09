@@ -1,10 +1,7 @@
-﻿.sideicon {  
-    background-color: white;
+﻿.sideicon {      
     font-size: 30px;
     cursor: pointer;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 5px;
-    border-radius: 0px 0px 0px 20px;
 }
 
 .leftmenu {
@@ -46,11 +43,6 @@
         font-size: 16px;
     }
 
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
-}
-
 @media screen and (max-height: 450px) {
     .leftmenu {
         padding-top: 15px;
@@ -65,7 +57,7 @@
     background-color: #333;
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 0px 0px 20px 0px;
+    border-radius: 0px 0px 10px 0px;
 }
 
 .topmenu a {
@@ -86,4 +78,17 @@
 .topmenu a.active {
     background-color: #4CAF50;
     color: white;
+}
+
+#maindiv {
+    transition: margin-left .5s;
+}
+
+.valkicon {
+    padding-left: 30px;
+}
+
+.page-main-container{
+    padding-left: 20%;
+    padding-right: 20%;
 }

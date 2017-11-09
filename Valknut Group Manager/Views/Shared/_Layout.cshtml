@@ -12,28 +12,38 @@
 <body>
     @Scripts.Render("~/bundles/custom")
     @Scripts.Render("~/bundles/jquery")
-
     @RenderSection("scripts", required: false)
-    <div class="container-fluid">
+    <div id="maindiv">
+        <div class="row">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li><div class="sideicon" onclick="openLeftMenu()">&#9776;</div></li>
+                        <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+                        <li><a href="@Url.Action("Index","About")">Sobre</a></li>
+                        <li><a href="@Url.Action("Index","Task")">Minhas Tarefas</a></li>
+                        <li><a href="@Url.Action("Index","Messages")">Mensagens</a></li>
+                        <li><a href="@Url.Action("Index","News")">Novidades</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
         <div class="row">
             <div id="sidemenu" class="leftmenu">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">Administração</a>
-                <a href="#">Projetos</a>
-                <a href="#">Grupos</a>
-                <a href="#">Entregas</a>
-                <a href="#">Timeline</a>
-            </div>
-            <div class="col-lg-2 text-center sideicon" onclick="openNav()">&#9776;</div>
-            <div class="col-lg-22 topmenu">
-                <a href="#" >Sobre</a>
-                <a href="#" >Minhas Tarefas</a>
-                <a href="#" >Mensagens</a>
-                <a href="#" >Novidades</a>
-                <a href="#" class="col-md-offset-12">Logged User - Image &or;</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeLeftMenu()">&times;</a>
+                <a href="@Url.Action("Index","Administration")">Administração</a>
+                <a href="@Url.Action("Index","Projects")">Projetos</a>
+                <a href="@Url.Action("Index","Group")">Grupos</a>
+                <a href="@Url.Action("Index","Deliver")">Entregas</a>
+                <a href="@Url.Action("Index","Timeline")">Timeline</a>
             </div>
         </div>
+        <div class="row">
+            <div class="valkicon text-center">
+                <img src="@Url.Content("~/Content/img/valk.png")">
+            </div>
+        </div>
+        @RenderBody()
     </div>
-    @RenderBody()
 </body>
 </html>
