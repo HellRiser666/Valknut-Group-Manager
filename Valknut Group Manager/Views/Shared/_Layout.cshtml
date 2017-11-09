@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/bundles/bootstrap")
+    @Styles.Render("~/bundles/css")
+
+</head>
+<body>
+    @Scripts.Render("~/bundles/custom")
+    @Scripts.Render("~/bundles/jquery")
+
+    @RenderSection("scripts", required: false)
+    <div class="container-fluid">
+        <div class="row">
+            <div id="sidemenu" class="leftmenu">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Administração</a>
+                <a href="#">Projetos</a>
+                <a href="#">Grupos</a>
+                <a href="#">Entregas</a>
+                <a href="#">Timeline</a>
+            </div>
+            <div class="col-lg-2 text-center sideicon" onclick="openNav()">&#9776;</div>
+            <div class="col-lg-22 topmenu">
+                <a href="#" >Sobre</a>
+                <a href="#" >Minhas Tarefas</a>
+                <a href="#" >Mensagens</a>
+                <a href="#" >Novidades</a>
+                <a href="#" class="col-md-offset-12">Logged User - Image &or;</a>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+</body>
+</html>
